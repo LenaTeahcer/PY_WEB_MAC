@@ -8,7 +8,7 @@ class Post(models.Model):
                                    max_length=100, blank=True,
                                    help_text='simple description')
 
-    create_date3 = models.DateTimeField('Create Date',
+    create_date3 = models.DateTimeField('Create Date3',
                                        auto_now_add=True,
                                        blank=True, null=True)
 

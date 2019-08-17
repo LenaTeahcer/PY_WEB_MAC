@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Pattaya&display=swap" rel="stylesheet">
+    {% load staticfiles %}
+    <script>
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://lenat.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <style>
+     #wrapper{
+     max-width : 1020px;
+     margin : 0 auto;
+     }
+     #title{
+            font-family: 'Pattaya', sans-serif;
+            text-align: center;
+            font-size:130px;
+            color:#FCFFF5;
+        }
+      #box{
+        width: 100%;
+        height:auto;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        display: inline-block;
+        text-align:center
+    }
+    .label{
+            font-family: 'Pattaya', sans-serif;
+            color: #91AA9D;
+        }
+         p{
+            padding-left:20px;
+            padding-right:20px;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size:20px;
+            color : #D1DBBD;
+        }
+    </style>
+</head>
+<body bgcolor="#193441">
+
+<div id="wrapper">
+    <h1 id="title">{{object.title}}</h1>
+    <div id="content">
+
+    <div id="box">
+        <p>
+            <span class="label" >Dscription</span> : {{object.description}}
+        </p>
+         <p>
+            <span class="label">Create Date</span> : {{object.create_date}}
+        </p>
+        <p>
+            <span class="label">Modifiy</span> : {{object.modify_date}}
+        </p>
+        <img src="{{object.image.url}}" width = "600" height ="600">
+
+    </div>
+    <div id="disqus_thread"></div>
+</div>
+</div>
+
+</body>
+</html

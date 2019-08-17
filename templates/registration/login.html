@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="." method="post">{% csrf_token %}
+    {% if form.errors %}
+        <p>에러발생. 입력정보 오류</p>
+    {% endif %}
+
+    <div>
+        {{ form.username.label_tag }} {{ form.username }}
+    </div>
+
+    <div>
+        {{ form.password.label_tag }} {{ form.password }}
+    </div>
+
+    <button type="submit">Login</button>
+</form>
+
+</body>
+</html>
